@@ -1,0 +1,234 @@
+/* ===========================================================
+   Ashley Rojas — academic website
+   Palette: Warm modern minimal
+   =========================================================== */
+
+:root {
+  --bg:        #FAF8F5;   /* page background (warm off-white) */
+  --surface:   #FFFFFF;   /* cards */
+  --tint:      #F3E9E4;   /* accent-tinted panels */
+  --ink:       #2B2B2B;   /* primary text (charcoal) */
+  --muted:     #7A6E64;   /* secondary text */
+  --accent:    #B5533C;   /* terracotta */
+  --accent-dk: #93412E;   /* darker terracotta (hover) */
+  --border:    #E7DED6;   /* hairline */
+  --maxw:      760px;     /* content column width */
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-dk); text-decoration: underline; }
+
+/* ---------- Header / nav ---------- */
+.site-header { border-bottom: 1px solid var(--border); background: var(--bg); }
+.nav {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.nav .brand {
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: .01em;
+}
+.nav .brand:hover { text-decoration: none; color: var(--accent); }
+.nav ul { list-style: none; display: flex; gap: 22px; margin: 0; padding: 0; flex-wrap: wrap; }
+.nav a.navlink {
+  color: var(--muted);
+  font-size: 15px;
+  letter-spacing: .02em;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+}
+.nav a.navlink:hover { color: var(--ink); text-decoration: none; }
+.nav a.navlink.active { color: var(--accent); border-bottom-color: var(--accent); font-weight: 500; }
+
+/* ---------- Hero (home) ---------- */
+.hero { text-align: center; padding: 48px 0 20px; }
+.hero img.headshot {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--surface);
+  box-shadow: 0 2px 18px rgba(90, 60, 45, 0.12);
+  margin-bottom: 22px;
+}
+.hero h1 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 1.1;
+  margin: 0 0 8px;
+  color: var(--ink);
+}
+.hero .subtitle { color: var(--muted); font-size: 17px; margin: 0 0 18px; }
+.hero .subtitle .sep { color: var(--accent); padding: 0 6px; }
+.hero .lede { max-width: 560px; margin: 0 auto 22px; font-size: 17px; }
+
+/* ---------- Contact link row ---------- */
+.links { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin: 20px 0 8px; }
+.links a {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 8px 16px;
+  color: var(--ink);
+  font-size: 14.5px;
+  transition: all .15s ease;
+}
+.links a:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; box-shadow: 0 1px 6px rgba(181,83,60,.12); }
+.links svg { width: 16px; height: 16px; }
+
+/* ---------- Sections ---------- */
+main { padding: 20px 0 60px; }
+.page-title {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 32px;
+  font-weight: 600;
+  margin: 34px 0 6px;
+}
+.section-h {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 21px;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 40px 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+.section-h:first-of-type { margin-top: 20px; }
+
+/* ---------- Featured JMP card ---------- */
+.jmp {
+  background: var(--tint);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 10px;
+  padding: 22px 24px;
+  margin: 26px 0;
+  text-align: left;
+}
+.jmp .eyebrow {
+  text-transform: uppercase;
+  letter-spacing: .13em;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.jmp h3 {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.25;
+  margin: 0 0 12px;
+  color: var(--ink);
+}
+.jmp p.abstract { font-size: 15.5px; color: var(--ink); margin: 0 0 16px; }
+
+/* ---------- Paper entries ---------- */
+.paper { margin: 0 0 26px; }
+.paper h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 4px;
+  color: var(--ink);
+  line-height: 1.3;
+}
+.paper .authors { color: var(--muted); font-size: 15px; margin: 0 0 6px; }
+.paper .meta { color: var(--muted); font-style: italic; font-size: 14.5px; margin: 0 0 8px; }
+.paper p.abstract { font-size: 15.5px; margin: 8px 0 10px; }
+
+/* Abstract toggle */
+details.abs { margin: 6px 0 10px; }
+details.abs > summary {
+  cursor: pointer; color: var(--accent); font-size: 14.5px; font-weight: 500;
+  list-style: none; display: inline-block;
+}
+details.abs > summary::-webkit-details-marker { display: none; }
+details.abs > summary::before { content: "▸ "; }
+details.abs[open] > summary::before { content: "▾ "; }
+details.abs p { font-size: 15px; color: var(--ink); margin: 10px 0 0; }
+
+/* Pill buttons for links */
+.btn-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+.btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 6px 13px;
+  font-size: 14px;
+  color: var(--ink);
+}
+.btn:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+.btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+.btn.primary:hover { background: var(--accent-dk); color: #fff; }
+.btn svg { width: 15px; height: 15px; }
+
+/* ---------- Teaching ---------- */
+.course { padding: 14px 0; border-bottom: 1px solid var(--border); }
+.course:last-child { border-bottom: none; }
+.course .cnum { font-weight: 600; color: var(--ink); }
+.course .cterm { color: var(--muted); font-size: 14.5px; }
+.course .cdesc { color: var(--ink); font-size: 15.5px; margin-top: 3px; }
+.role-tag {
+  display: inline-block; background: var(--tint); color: var(--accent-dk);
+  font-size: 12px; font-weight: 600; letter-spacing: .04em;
+  padding: 2px 10px; border-radius: 999px; margin-bottom: 6px;
+}
+
+/* ---------- CV embed ---------- */
+.cv-frame {
+  width: 100%; height: 900px; border: 1px solid var(--border);
+  border-radius: 10px; background: var(--surface); margin-top: 18px;
+}
+.callout { background: var(--tint); border: 1px solid var(--border); border-radius: 8px; padding: 14px 18px; font-size: 15px; color: var(--muted); }
+
+/* ---------- Footer ---------- */
+.site-footer {
+  border-top: 1px solid var(--border);
+  margin-top: 40px;
+  padding: 26px 0 40px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+}
+.site-footer a { color: var(--muted); }
+.site-footer a:hover { color: var(--accent); }
+.site-footer .fnav { margin-bottom: 8px; }
+.site-footer .fnav a { margin: 0 10px; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 560px) {
+  .hero h1 { font-size: 32px; }
+  .hero img.headshot { width: 170px; height: 170px; }
+  .nav { justify-content: center; }
+  .nav .brand { width: 100%; text-align: center; }
+  .nav ul { justify-content: center; }
+  body { font-size: 16px; }
+}
