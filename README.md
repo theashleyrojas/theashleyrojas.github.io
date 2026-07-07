@@ -73,16 +73,16 @@ Then open <http://localhost:8000> in your browser. Ctrl-C to stop.
 ## Step 5 — Custom domain (you chose this)
 
 1. Buy a domain (~$12/yr) from Namecheap, Cloudflare, Google Domains, etc.
-   Something like `ashleyrojas.com` or `ashley-rojas.com`.
+   Something like `ashleyrojas.org` or `ashley-rojas.com`.
 2. Edit the **CNAME** file in this repo so it contains only your domain, e.g.:
 
    ```
-   www.ashleyrojas.com
+   www.ashleyrojas.org
    ```
 
 3. At your domain registrar, add DNS records pointing to GitHub Pages:
    - A **CNAME record**: host `www` → value `YOURUSERNAME.github.io`
-   - Four **A records** for the apex (`@`) so `ashleyrojas.com` works too:
+   - Four **A records** for the apex (`@`) so `ashleyrojas.org` works too:
      `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
 4. Back in **Settings → Pages → Custom domain**, enter your domain and save.
    Check "Enforce HTTPS" once it becomes available (can take a few hours).
